@@ -11,3 +11,4 @@ pyvenv.cfg
 *.pem
 *accessKeys.csv
 pack
+**/__pycache__/
