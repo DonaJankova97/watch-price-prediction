@@ -1,0 +1,13 @@
+.env
+.idea/
+bin/
+include/
+lib/
+lib64
+node_modules/
+venv/
+venv1/
+pyvenv.cfg
+*.pem
+*accessKeys.csv
+pack
