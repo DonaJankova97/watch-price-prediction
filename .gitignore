@@ -12,3 +12,4 @@ pyvenv.cfg
 *accessKeys.csv
 pack
 **/__pycache__/
+*.ipynb_checkpoints/
