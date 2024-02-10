@@ -260,7 +260,7 @@
                 </div>
                 <div class="input">
                     <input type="text" class="input-field" name="Water Resistance" />
-                    <label class="input-label">Water Resistance</label>
+                    <label class="input-label">Water Resistance (meters)</label>
                 </div>
                 <div class="input">
                     <input type="text" class="input-field" name="Case Diameter (mm)" required pattern="^-?\d+(\.\d+)?$" oninput="InvalidMsg(this)"/>
@@ -288,7 +288,7 @@
                 </div>
                 <div class="input">
                     <input type="text" class="input-field" name="Power Reserve" />
-                    <label class="input-label">Power Reserve</label>
+                    <label class="input-label">Power Reserve (hours)</label>
                 </div>
                 <div class="action">
                     <button class="action-button" type="submit" onclick="submitForm()">Calculate the price</button>
@@ -328,6 +328,12 @@
         document.querySelectorAll('.card-form input').forEach(function(i) {
             input_field_values[i.name] = i.value
         })
+        if (input_field_values["Power Reserve"] === null){
+            input_field_values["Power Reserve"] = 55
+        }
+        if (input_field_values["Water Resistance"] === null){
+            input_field_values["Water Resistance"] = 100
+        }
         return input_field_values
     }
 
