@@ -14,6 +14,7 @@ def transform_fn(model, request_body, content_type, accept_type):
         data = json.loads(request_body)
         df = pd.DataFrame([data])
         price = model.predict(df)[0]
+        price = round(price, 3)
         return json.dumps({'prediction': str(price)})
     else:
         raise ValueError(f"{content_type} not supported by script!")
