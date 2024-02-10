@@ -328,11 +328,11 @@
         document.querySelectorAll('.card-form input').forEach(function(i) {
             input_field_values[i.name] = i.value
         })
-        if (input_field_values["Power Reserve"] === null){
-            input_field_values["Power Reserve"] = 55
+        if (!input_field_values["Power Reserve"]) {
+            input_field_values["Power Reserve"] = 55;
         }
-        if (input_field_values["Water Resistance"] === null){
-            input_field_values["Water Resistance"] = 100
+        if (!input_field_values["Water Resistance"]) {
+            input_field_values["Water Resistance"] = 100;
         }
         return input_field_values
     }
