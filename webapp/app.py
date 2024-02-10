@@ -38,7 +38,6 @@ def predict():
     runtime = boto3.Session().client(service_name='sagemaker-runtime', region_name='us-east-1')
     endpoint_name = "predict-price"
     result = send_request(endpoint_name, req_data, runtime)
-    # df = pd.DataFrame(req_data).reindex(columns=col_names)
     return result
 
 
