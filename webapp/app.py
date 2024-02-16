@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import json
 import boto3
-import generate_plots
 
 app = Flask(__name__)
 
@@ -16,13 +15,9 @@ def form_page():
     return render_template('form.html')
 
 
-@app.route("/statistics")
+@app.route("/data")
 def statistics_page():
-    price_distribution = generate_plots.get_price_distribution()
-    categorical_distribution = generate_plots.get_categorical_distribution()
-    numerical_distribution = generate_plots.get_numerical_distribution()
-
-    return render_template('statistics.html', price_distribution=price_distribution, categorical_distribution=categorical_distribution, numerical_distribution=numerical_distribution)
+    return render_template('data.html')
 
 
 def send_request(endpoint_name, payload, runtime):
