@@ -16,6 +16,5 @@ RUN pip3 install -r requirements.txt
 
 # copy code and data
 COPY webapp .
-COPY ["model/Luxury watch.csv", "Luxury watch.csv"]
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
