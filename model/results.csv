@@ -1,0 +1,24 @@
+,Model Name,R2 score,MAE,MSE,RMSE
+6,GradientBoostingRegressor(),0.933,1609.007,5142501.051,2267.708
+1,Ridge(),0.924,1679.765,5810221.447,2410.44
+2,Lasso(),0.92,1737.076,6153025.708,2480.529
+0,LinearRegression(),0.909,1893.619,6982337.435,2642.411
+10,LGBMRegressor(),0.896,1975.361,7967753.698,2822.721
+4,RandomForestRegressor(),0.891,1819.16,8407230.021,2899.522
+5,ExtraTreesRegressor(),0.861,1784.018,10725137.894,3274.926
+7,"XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, device=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=None, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=None, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             multi_strategy=None, n_estimators=None, n_jobs=None,
+             num_parallel_tree=None, random_state=None, ...)",0.856,1850.41,11080523.451,3328.742
+3,DecisionTreeRegressor(),0.81,2378.641,14644032.642,3826.752
+8,KNeighborsRegressor(),0.757,2502.918,18723092.876,4327.019
+12,<keras.src.engine.sequential.Sequential object at 0x7fa789179d80>,0.679,3318.961,24671196.0,4967.011
+9,SVR(kernel='linear'),-0.081,5802.054,83133720.005,9117.769
+11,"MLPRegressor(hidden_layer_sizes=(10,), max_iter=1000, random_state=42)",-1.514,10809.489,193360553.776,13905.415
