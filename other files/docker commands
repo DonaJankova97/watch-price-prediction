@@ -1,0 +1,25 @@
+docker commands
+
+docker build --no-cache -t web-app .
+docker images -a
+docker run -p 127.0.0.1:3000:3000 --name web-app-container web-app (docker run --rm -it -dp 127.0.0.1:3000:3000 web-app /bin/bash)
+docker ps -a
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' web-app-container
+	output: 172.17.0.2
+	url: 172.17.0.2:5000
+	
+for deleting
+docker container stop web-app-container
+docker container rm web-app-container
+docker image rm web-app
+
+for deleting all containers
+docker container rm $(docker ps -a -q)
+
+for exporting docker image
+docker save -o web-app.tar web-app
+
+for stopping and starting docker container
+docker stop web-app-container
+docker start web-app-container
+

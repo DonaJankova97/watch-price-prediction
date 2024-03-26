@@ -1,0 +1,25 @@
+ec2 commands
+
+in local terminal
+docker save -o web-app.tar web-app
+chmod go-rwx key-name.pem
+ssh -i key-name.pem ec2-user@54.221.4.80
+
+this opens ec2 terminal
+sudo yum update
+sudo yum install -y docker
+sudo service docker start
+mkdir webapp_docker
+
+in local terminal
+scp -i key-name.pem "/home/dona/Documents/Luxury Watches Price/web-app.tar" ec2-user@54.221.4.80:/home/ec2-user/webapp_docker
+
+in ec2 terminal
+cd webapp_docker
+sudo docker load -i web-app.tar
+sudo docker images -a
+sudo docker run -p 80:5000 --name web-app-container web-app
+sudo docker stop web-app-container 
+sudo docker start web-app-container 
+
+type the http:public Ip address of ec2 as url for the web site
